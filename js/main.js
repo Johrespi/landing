@@ -31,10 +31,20 @@ formulario.addEventListener('submit', (event) => {
     .then(respuesta => respuesta.json())
     .then(datos => {
         console.log(datos);
+
     })
     .catch(error => console.error(error));
 });
 
+
+function limpiarCampos() {
+    document.getElementById('nombre').value = '';
+    document.getElementById('apellido').value = '';
+    document.getElementById('email').value = ''; 
+    document.getElementById('cedula').value = ''; 
+    document.getElementById('telefono').value = ''; 
+    document.getElementById('direccion').value = ''; 
+}
 
 
 /*let loaded = (eventLoaded) => {
