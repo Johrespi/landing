@@ -367,7 +367,7 @@ a {
 
 .custom-list {
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   align-items: flex-start;}
   .custom-list li {
