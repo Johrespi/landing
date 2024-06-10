@@ -46,7 +46,39 @@ function limpiarCampos() {
     document.getElementById('direccion').value = ''; 
 }
 
+async function obtenerDatos(){
 
+    const respuesta = await fetch(url);
+
+    if(!respuesta.ok){
+        console.error("Error:", respuesta.status);
+        return;
+    }
+
+    const datos = await respuesta.json();
+    console.log(datos);
+
+    let template = '';
+
+    for (const key in datos) {
+        if (Object.hasOwnProperty.call(datos, key)) {
+            const elemento = datos[key];
+            template += `
+                <tr>
+                    <td>${elemento.apellido}</td>
+                    <td>${elemento.nombre}</td>
+                </tr>
+            `;
+        }
+    }
+
+    const tabla = document.getElementById('tabla');
+    tabla.innerHTML = template;
+}
+
+obtenerDatos();
+
+/* hacerlo con el evento submit*/
 /*let loaded = (eventLoaded) => {
     let myform = document.getElementById('formulario');
     myform.addEventListener('submit', (eventSubmit) => eventSubmit{})
