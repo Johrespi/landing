@@ -132,3 +132,26 @@ obtenerDatos()
 
 window.addEventListener("DOMContentLoaded", loaded);*/
 
+// window.addEventListener('load', (eventLoaded) => {
+
+//     form = document.getElementById('formulario');
+//     const url = 'https://landing-d3a5e-default-rtdb.firebaseio.com/adopcion.json';
+
+//     form.addEventListener('submit', (eventSubmit) => {
+//         eventSubmit.preventDefault();
+
+//         const datos = {
+//             nombre: form.name.value,
+//             apellido: form.apellido.value
+//         }
+
+//         fetch(url, {
+//             method: 'POST',
+//             headers: {'Content-Type': "application/json"},
+//             body: JSON.stringify(datos)
+//         }).then(respuesta => respuesta.json()).then(datos => console.log(datos)).catch(error => console.error(error))
+//     })
+
+// })
+
+
